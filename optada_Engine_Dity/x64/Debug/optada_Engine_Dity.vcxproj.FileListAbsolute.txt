@@ -1,0 +1,2 @@
+D:\GIT\GameJame2020\optada_Engine_Dity\x64\Debug\optada_Engine_Dity.exe
+D:\GIT\GameJame2020\optada_Engine_Dity\x64\Debug\optada_Engine_Dity.pdb

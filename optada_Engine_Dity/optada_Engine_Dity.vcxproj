@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{88ed9959-84f5-456f-b511-12d22316131d}</ProjectGuid>
+    <RootNamespace>optadaEngineDity</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v142</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <IncludePath>$(OutDir);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath);$(DXSDK_DIR)Lib\x64</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <IncludePath>$(OutDir);$(IncludePath);$(DXSDK_DIR)Include</IncludePath>
+    <LibraryPath>$(OutDir);$(LibraryPath);$(DXSDK_DIR)Lib\x64</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3dcompiler.lib;dinput8.lib;dsound.lib;d3d11.lib;d3dx11.lib;d3dx10.lib;d3dx11d.lib;d3dx9d.lib;dxguid.lib;dxgi.lib;dxerr.lib;comctl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>
+      </AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>d3dcompiler.lib;dinput8.lib;dsound.lib;d3d11.lib;d3dx11.lib;d3dx10.lib;d3dx11d.lib;d3dx9d.lib;dxguid.lib;dxgi.lib;dxerr.lib;comctl32.lib;winmm.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Code\Input\OPTada_Input.cpp" />
+    <ClCompile Include="Code\Main.cpp" />
+    <ClCompile Include="Code\Render\OPTada_Render.cpp" />
+    <ClCompile Include="Code\Render\ResourceManager\MamoryManager_x64\OPTada_MemoryManager.cpp" />
+    <ClCompile Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\CellBuffer\OPTadaC_MemoryCells_StaticCyclicBuffer.cpp" />
+    <ClCompile Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\OPTadaC_MultithreadedSimpleMemoryBuffer.cpp" />
+    <ClCompile Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\OPTadaC_SimpleMemoryBuffer.cpp" />
+    <ClCompile Include="Code\Render\ResourceManager\OPTadaC_ResourceManager.cpp" />
+    <ClCompile Include="Code\Render\ResourceManager\WICTextureLoader11.cpp" />
+    <ClCompile Include="Code\Sound\include\dr_impl.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_alsa.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_audiosource.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_bus.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_coreaudio.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_3d.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_basicops.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_faderops.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_filterops.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_getters.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_setters.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_voicegroup.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_core_voiceops.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_fader.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_fft.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_fft_lut.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_file.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_filter.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_jack.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_miniaudio.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_misc.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_nosound.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_null.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_openal.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_openal_dll.c" />
+    <ClCompile Include="Code\Sound\include\soloud_opensles.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_oss.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_portaudio.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_portaudio_dll.c" />
+    <ClCompile Include="Code\Sound\include\soloud_queue.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_sdl1.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_sdl1_dll.c" />
+    <ClCompile Include="Code\Sound\include\soloud_sdl2.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_sdl2_dll.c" />
+    <ClCompile Include="Code\Sound\include\soloud_sdl2_static.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_sdl_static.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_thread.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_wasapi.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_wav.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_wavstream.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_winmm.cpp" />
+    <ClCompile Include="Code\Sound\include\soloud_xaudio2.cpp" />
+    <ClCompile Include="Code\Sound\include\stb_vorbis.c" />
+    <ClCompile Include="Code\Window\OPTada_Window.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Code\Game_Level.h" />
+    <ClInclude Include="Code\Input\OPTada_Input.h" />
+    <ClInclude Include="Code\OPTadaC_GO_Factory.h" />
+    <ClInclude Include="Code\OPTadaC_GO_Template.h" />
+    <ClInclude Include="Code\OPTadaS_Chunk.h" />
+    <ClInclude Include="Code\OPTada_Instance.h" />
+    <ClInclude Include="Code\Physics\q3.h" />
+    <ClInclude Include="Code\Render\OPTadaC_Obj_Camera.h" />
+    <ClInclude Include="Code\Render\OPTadaC_Obj_Draw.h" />
+    <ClInclude Include="Code\Render\OPTadaC_Obj_Light.h" />
+    <ClInclude Include="Code\Render\OPTadaC_ShadowClass.h" />
+    <ClInclude Include="Code\Render\OPTadaS_WorldNavigationData.h" />
+    <ClInclude Include="Code\Render\OPTada_ConstantBuffers.h" />
+    <ClInclude Include="Code\Render\OPTada_Render.h" />
+    <ClInclude Include="Code\Render\OPTada_Render_Settings.h" />
+    <ClInclude Include="Code\Render\ResourceManager\ConstantBufferList.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\OPTada_MemoryManager.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\OPTada_MemoryManager_Settings.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\CellBuffer\OPTadaC_MemoryCells_StaticCyclicBuffer.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\CellBuffer\OPTadaS_MemoryCell_Element.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\OPTadaC_MultithreadedSimpleMemoryBuffer.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\OPTadaC_SimpleMemoryBuffer.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\OPTadaC_TemplateOfMemoryBuffer.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MamoryManager_x64\SupportBuffers\OPTadaS_TemplateMemoryBuffer_Element.h" />
+    <ClInclude Include="Code\Render\ResourceManager\MeshList.h" />
+    <ClInclude Include="Code\Render\ResourceManager\OBJ_Loader.h" />
+    <ClInclude Include="Code\Render\ResourceManager\OPTadaC_ResourceManager.h" />
+    <ClInclude Include="Code\Render\ResourceManager\OPTadaC_ResourceManager_Settings.h" />
+    <ClInclude Include="Code\Render\ResourceManager\PixelShaderList.h" />
+    <ClInclude Include="Code\Render\ResourceManager\TextureList.h" />
+    <ClInclude Include="Code\Render\ResourceManager\VertexShaderList.h" />
+    <ClInclude Include="Code\Render\ResourceManager\WICTextureLoader11.h" />
+    <ClInclude Include="Code\Sound\include\dr_flac.h" />
+    <ClInclude Include="Code\Sound\include\dr_mp3.h" />
+    <ClInclude Include="Code\Sound\include\dr_wav.h" />
+    <ClInclude Include="Code\Sound\include\miniaudio.h" />
+    <ClInclude Include="Code\Sound\include\soloud.h" />
+    <ClInclude Include="Code\Sound\include\soloud_audiosource.h" />
+    <ClInclude Include="Code\Sound\include\soloud_bassboostfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_biquadresonantfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_bus.h" />
+    <ClInclude Include="Code\Sound\include\soloud_c.h" />
+    <ClInclude Include="Code\Sound\include\soloud_dcremovalfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_echofilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_error.h" />
+    <ClInclude Include="Code\Sound\include\soloud_fader.h" />
+    <ClInclude Include="Code\Sound\include\soloud_fft.h" />
+    <ClInclude Include="Code\Sound\include\soloud_fftfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_file.h" />
+    <ClInclude Include="Code\Sound\include\soloud_file_hack_off.h" />
+    <ClInclude Include="Code\Sound\include\soloud_file_hack_on.h" />
+    <ClInclude Include="Code\Sound\include\soloud_filter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_flangerfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_freeverbfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_internal.h" />
+    <ClInclude Include="Code\Sound\include\soloud_lofifilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_misc.h" />
+    <ClInclude Include="Code\Sound\include\soloud_monotone.h" />
+    <ClInclude Include="Code\Sound\include\soloud_noise.h" />
+    <ClInclude Include="Code\Sound\include\soloud_openmpt.h" />
+    <ClInclude Include="Code\Sound\include\soloud_queue.h" />
+    <ClInclude Include="Code\Sound\include\soloud_robotizefilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_sfxr.h" />
+    <ClInclude Include="Code\Sound\include\soloud_speech.h" />
+    <ClInclude Include="Code\Sound\include\soloud_tedsid.h" />
+    <ClInclude Include="Code\Sound\include\soloud_thread.h" />
+    <ClInclude Include="Code\Sound\include\soloud_vic.h" />
+    <ClInclude Include="Code\Sound\include\soloud_vizsn.h" />
+    <ClInclude Include="Code\Sound\include\soloud_wav.h" />
+    <ClInclude Include="Code\Sound\include\soloud_waveshaperfilter.h" />
+    <ClInclude Include="Code\Sound\include\soloud_wavstream.h" />
+    <ClInclude Include="Code\Sound\include\stb_vorbis.h" />
+    <ClInclude Include="Code\TheGame.h" />
+    <ClInclude Include="Code\Window\OPTada_Window.h" />
+    <ClInclude Include="Code\Window\OPTada_Window_Settings.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Shaders\PS_Color.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PS_Material_Default</EntryPointName>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PS_Material_Default</EntryPointName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PS_Material_Default</VariableName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PS_Material_Default</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inc/PS_Material_Default.h</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inc/PS_Material_Default.h</HeaderFileOutput>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">4.0_level_9_3</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">4.0_level_9_3</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shaders\PS_Shadow.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PS_Material_Default</EntryPointName>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PS_Material_Default</EntryPointName>
+    </FxCompile>
+    <FxCompile Include="Shaders\VS_Color.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS_Material_Default</EntryPointName>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VS_Material_Default</EntryPointName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS_Material_Default</VariableName>
+      <VariableName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VS_Material_Default</VariableName>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">inc/VertexShader.h</HeaderFileOutput>
+      <HeaderFileOutput Condition="'$(Configuration)|$(Platform)'=='Release|x64'">inc/VertexShader.h</HeaderFileOutput>
+    </FxCompile>
+    <FxCompile Include="Shaders\VS_Shadow.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Vertex</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS_Material_Default</EntryPointName>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VS_Material_Default</EntryPointName>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
