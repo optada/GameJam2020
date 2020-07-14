@@ -13,6 +13,9 @@ min4uk - Support Dev
 This project was created in 2 days! (48h) for GameJame2020, on my engine(was created in 3 weeks XD).
 GameJam's theme was "Out of control" XD
 
+F - spawn cars
+W - moove forward (+A left | +D right) 
+
 So, that was creazy and funny! 
 
 // --------------------------------------------------------------------------------------------------
